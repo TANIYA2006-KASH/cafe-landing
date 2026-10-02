@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chai Corner: a neighbourhood cafe serving fresh chai, coffee and snacks.">
+<title>Chai Corner | Cafe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="top">
+  <a class="brand" href="#top">Chai Corner</a>
+  <button id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="links">&#9776;</button>
+  <nav id="links" aria-label="Main">
+    <a href="#about">Story</a><a href="#menu">Menu</a><a href="#visit">Visit</a><a class="cta" href="#book">Reserve</a>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Since 2019 &middot; Open daily</p>
+    <h1>Slow mornings.<br>Strong chai.</h1>
+    <p class="lead">A small neighbourhood cafe where the kettle is always on.</p>
+    <a class="btn" href="#menu">See the menu</a> <a class="btn ghost" href="#book">Book a table</a>
+  </section>
+
+  <section id="about" class="wrap reveal">
+    <h2>Our story</h2>
+    <div class="cols">
+      <p>We started with one stove and one recipe: a ginger-cardamom chai our grandmother made. Today we brew it fresh every hour and pair it with snacks baked in-house.</p>
+      <ul class="facts"><li><b>6</b> years brewing</li><li><b>40+</b> items on the menu</li><li><b>100%</b> fresh daily</li></ul>
+    </div>
+  </section>
+
+  <section id="menu" class="wrap reveal">
+    <h2>Menu</h2>
+    <div class="tabs" role="group" aria-label="Menu categories">
+      <button class="tab on" data-c="all">All</button><button class="tab" data-c="drinks">Drinks</button><button class="tab" data-c="food">Food</button><button class="tab" data-c="sweet">Sweet</button>
+    </div>
+    <div class="menu" id="items"></div>
+  </section>
+
+  <section id="book" class="wrap reveal">
+    <h2>Reserve a table</h2>
+    <form id="rsv" novalidate>
+      <label>Name<input id="n" required autocomplete="name"><small></small></label>
+      <label>Phone<input id="p" type="tel" required autocomplete="tel" placeholder="10-digit number"><small></small></label>
+      <label>Date<input id="d" type="date" required><small></small></label>
+      <label>Guests<select id="g"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+      <button class="btn" type="submit">Request booking</button>
+    </form>
+    <p id="ok" role="status" hidden></p>
+  </section>
+
+  <section id="visit" class="wrap reveal">
+    <h2>Visit us</h2>
+    <div class="cols">
+      <div class="panel"><h3>Hours</h3><p>Mon to Fri: 8 AM &ndash; 10 PM<br>Sat &amp; Sun: 9 AM &ndash; 11 PM</p></div>
+      <div class="panel"><h3>Find us</h3><p>12 Market Road, Your City<br>hello@chaicorner.example</p></div>
+    </div>
+  </section>
+</main>
+<footer><p>&copy; <span id="y">2026</span> Chai Corner. A practice project.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
